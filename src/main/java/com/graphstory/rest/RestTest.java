@@ -9,6 +9,8 @@ public class RestTest {
     public static void main(String args[]) throws UnirestException {
         HttpResponse<JsonNode> jsonResponse;
 
+        System.out.println("GET http://httpbin.org/ip");
+
         jsonResponse = Unirest.get("http://httpbin.org/ip")
                 .header("accept", "application/json")
                 .asJson();
