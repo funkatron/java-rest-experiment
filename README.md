@@ -28,3 +28,13 @@ I get this error:
 
 
 I can run the class from within IntelliJ IDEA, though.
+
+## Solution
+
+Use the maven assembly plugin. See the `pom.xml` file. Build with this:
+
+`mvn clean compile assembly:single`
+
+Then run with 
+
+`java -cp target/RestTest-0.1-SNAPSHOT-jar-with-dependencies.jar com.graphstory.rest.RestTest`
